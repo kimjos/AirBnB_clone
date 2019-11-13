@@ -14,6 +14,7 @@ from models.place import Place
 from models.review import Review
 import json
 
+
 class HBNBCommand(cmd.Cmd):
     """
     HBNB command interpreter
@@ -52,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **'")
         else:
             dic = {'BaseModel': BaseModel, 'User': User, 'State': State,
-                  'City': City, 'Amenity': Amenity, 'Place': Place,
+                   'City': City, 'Amenity': Amenity, 'Place': Place,
                    'Review': Review}
             command = dic[args]()
             print(command.id)
@@ -106,7 +107,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_all (self, args):
+    def do_all(self, args):
         """
          Prints all string representation of all
          instances based or not on the class name
@@ -150,7 +151,7 @@ class HBNBCommand(cmd.Cmd):
             if obj:
                 if len(token) < 3:
                     print("** attribute name missing **")
-                elif len(token) <4:
+                elif len(token) < 4:
                     print("** value missing **")
                 elif token[2] not in nomod:
                     obj.__dict__[token[2]] = token[3]
@@ -159,5 +160,5 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-if __name__=="__main__":
+if __name__ == "__main__":
     HBNBCommand().cmdloop()
