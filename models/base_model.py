@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 import models
 
+
 class BaseModel():
     """Base Model class"""
 
