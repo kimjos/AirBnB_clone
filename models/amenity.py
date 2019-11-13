@@ -4,6 +4,7 @@ Class Amenity that inherits from BaseModel
 """
 from models.base_model import BaseModel
 
+
 class Amenity(BaseModel):
     """
     Class to save the Amenity

@@ -2,6 +2,12 @@
 """ File to serialize and deserialize JSON """
 import json
 from models.base_model import BaseModel
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 import os
 
 
@@ -32,7 +38,14 @@ class FileStorage:
 
     def reload(self):
         """ Deserialize JSON file """
-        new_dict = {"BaseModel": BaseModel}
+        new_dict = {"BaseModel": BaseModel,
+                    "City": City,
+                    "Amenity": Amenity,
+                    "Place": Place,
+                    "Review": Review,
+                    "State": State,
+                    "User": User}
+
         """ Dictionary to able the reload """
         if os.path.isfile(self.__file_path):
             with open(self.__file_path, "r") as readed:
