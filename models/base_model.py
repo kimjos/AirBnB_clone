@@ -8,11 +8,20 @@ import datetime
 class BaseModel():
     """Base Model class"""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """ init method """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
+        time_format = "%Y-%m-%dT%H:%M:%S.%f"
+
+         if kwargs:
+             for key, val in kwargs.items():
+                 if key != "__class__":
+                     if key == "created_at" or key == "updated_at":
+                         val = datetime.datetime.strptime(val, time_format)
+                     setattr(self, key, val)
+         else:
+             self.id = str(uuid.uuid4())
+             self.created_at = datetime.datetime.now()
+             self.updated_at = datetime.datetime.now()
 
     def save(self):
         """saving public instance attribute"""
