@@ -94,12 +94,12 @@ class HBNBCommand(cmd.Cmd):
         token = args.split()
         objects = storage.all()
         if token[0] not in HBNBCommand.checkclass:
-            print(token[0])
             print("** class doesn't exist **")
             return
         elif len(token) == 1:
             print("** instance id missing **")
             return
+
         elif len(token) == 2:
             obj = token[0] + "." + token[1]
             for key in objects.keys():
@@ -107,6 +107,8 @@ class HBNBCommand(cmd.Cmd):
                     del objects[key]
                     storage.save()
                     return
+                else:
+                    print("** no instance found **")
         else:
             print(len(token))
             print("** class doesn't exist **")
