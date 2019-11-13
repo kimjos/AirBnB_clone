@@ -125,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
                 if token[0] not in HBNBCommand.checkclass:
                     print("** class doesn't exist ** ")
                     return
-                if token[0] == objects[key].__dict__['__class__']:
+                if token[0] in HBNBCommand.checkclass:
                     print(objects[key])
             else:
                 print(objects[key])
