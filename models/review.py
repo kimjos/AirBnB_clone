@@ -4,6 +4,7 @@ Class Review that inherits from BaseModel
 """
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     """
     Class to save the reviews of the places

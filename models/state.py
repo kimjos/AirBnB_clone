@@ -4,6 +4,7 @@ Class State that inherits from BaseModel
 """
 from models.base_model import BaseModel
 
+
 class State(BaseModel):
     """
     Class to save the state where are the

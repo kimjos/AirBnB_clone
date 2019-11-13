@@ -4,6 +4,7 @@ Class City that inherits from BaseModel
 """
 from models.base_model import BaseModel
 
+
 class City(BaseModel):
     """
     Class to save the city where are the
