@@ -54,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **'")
         else:
             dic = {'BaseModel': BaseModel, 'User': User, 'State': State,
-                   'City': City, 'Amenity': Amenity, 'Place': Place,
+                  'City': City, 'Amenity': Amenity, 'Place': Place,
                    'Review': Review}
             command = dic[args]()
             print(command.id)
@@ -120,15 +120,17 @@ class HBNBCommand(cmd.Cmd):
         """
         token = args.split()
         objects = storage.all()
+        inlist = []
         for key in objects.keys():
             if token:
                 if token[0] not in HBNBCommand.checkclass:
-                    print("** class doesn't exist ** ")
+                    print("** class doesn't exist **")
                     return
                 if token[0] in HBNBCommand.checkclass:
-                    print(objects[key])
+                    inlist.append(str(objects[key]))
             else:
-                print(objects[key])
+                inlist.append(str(objects[key]))
+        print(inlist)
 
     def do_update(self, args):
         """
