@@ -4,6 +4,7 @@ The goal of the project is to deploy on your server a simple copy of the AirBnB 
 
 <a href="https://holbertonschool.com"><img src="https://i.ibb.co/RyBcXY6/cherry72.png" align="right" width="200" height="200" alt="cherry72" border="0"></a>
 
+## General Description
 The goal of the project is to deploy on your server a simple copy of the AirBnB website.
 By this project we have learned how to create a console which classes allows us
 to handle information like Users, places, states, cities and others ones.
@@ -19,6 +20,23 @@ After 4 months, we will have a complete web application composed by:
 * A database or files that store data (data = objects)
 
 * An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
+
+## Console Objectives
+
+ * Create our data model
+ * Manage (create, update, destroy, etc) objects via a console / command interpreter
+ * Store and persist objects to a file (JSON file)
+
+The first piece is to manipulate a powerful storage system. This storage engine
+will give us an abstraction between “My object” and “How they are stored and
+persisted”. This means: from our console code (the command interpreter itself)
+and from the front-end and RestAPI you will build later, We won’t have to pay
+attention (take care) of how our objects are stored.
+
+This abstraction will also allow us to change the type of storage easily without
+updating all of your codebase.
+
+The console will be a tool to validate this storage engine
 
 ## Table of contents
 * [Requirements](#requirements)
