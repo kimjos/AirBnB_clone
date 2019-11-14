@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Unittest for the State Class """
+"""
+Unittest for the State Class
+"""
 
 import json
 import unittest

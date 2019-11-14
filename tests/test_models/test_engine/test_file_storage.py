@@ -14,8 +14,12 @@ from models.state import State
 
 
 class TestFileStorage(unittest.TestCase):
-    """tests for FileStorageclass"""
+    """
+    tests for FileStorageclass
+    """
 
     def test_docstring(self):
-        """ checks if there is a docstring """
+        """
+        checks if there is a docstring
+        """
         self.assertIsNotNone(FileStorage.__doc__)
