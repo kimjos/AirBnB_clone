@@ -4,6 +4,8 @@ The goal of the project is to deploy on your server a simple copy of the AirBnB 
 
 <a href="https://holbertonschool.com"><img src="https://i.ibb.co/RyBcXY6/cherry72.png" align="right" width="200" height="200" alt="cherry72" border="0"></a>
 The goal of the project is to deploy on your server a simple copy of the AirBnB website.
+By this project we have learned how to create a console which classes allows us
+to handle information like Users, places, states, cities and others ones.
 ## Table of contents
 * [Requirements](#requirements)
 * [Instalation](#instalation)
