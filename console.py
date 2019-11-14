@@ -54,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             dic = {'BaseModel': BaseModel, 'User': User, 'State': State,
-                  'City': City, 'Amenity': Amenity, 'Place': Place,
+                   'City': City, 'Amenity': Amenity, 'Place': Place,
                    'Review': Review}
             command = dic[args]()
             print(command.id)
