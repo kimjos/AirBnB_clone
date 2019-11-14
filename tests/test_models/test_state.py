@@ -7,8 +7,15 @@ from models.state import State
 
 
 class TestState(unittest.TestCase):
-    """ Tests for State class """
+    """
+    Tests for State class
+    """
 
-    def test_docstring(self):
-        """ checks in there is a docstring """
-        self.assertIsNone(State.__doc__)
+    def something(self):
+        """
+        Generic Something function
+        """
+        self.do_something()
+
+if __name__ == "__main__":
+    unittest.main()
