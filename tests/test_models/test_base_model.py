@@ -5,6 +5,7 @@ import json
 import unittest
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     """tests for the Base Model class"""
 
