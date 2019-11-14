@@ -37,8 +37,11 @@ class BaseModel():
 
     def to_dict(self):
         """Adding to dictionary"""
-        new_dict = self.__dict__
-        new_dict['created_at'] = new_dict['created_at'].isoformat()
-        new_dict['updated_at'] = new_dict['updated_at'].isoformat()
-        new_dict['__class__'] = self.__class__.__name__
-        return new_dict
+        dic = {}
+        for key, value in self.__dict__.items():
+            dic["__class__"] = self.__class__.__name__
+            if key == "updated_at" or key == "created_at":
+                dic[key] = value.isoformat()
+            else:
+                dic[key] = value
+        return dic

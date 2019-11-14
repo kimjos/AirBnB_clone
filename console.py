@@ -3,6 +3,7 @@
 Command interpreter for the Hbnb
 """
 import cmd
+import shlex
 from datetime import datetime
 from models.base_model import BaseModel
 from models.user import User
@@ -90,21 +91,26 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        token = args.split(" ")
-        objects = storage.all
-        if args[0] not in HBNBCommand.checkclass:
+        token = args.split()
+        objects = storage.all()
+        if token[0] not in HBNBCommand.checkclass:
             print("** class doesn't exist **")
             return
-        if len(args) == 1:
+        elif len(token) == 1:
             print("** instance id missing **")
             return
-        if len(args) == 2:
+
+        elif len(token) == 2:
+            obj = token[0] + "." + token[1]
             for key in objects.keys():
-                if key == token[1]:
+                if key == obj:
                     del objects[key]
                     storage.save()
-                    break
+                    return
+                else:
+                    print("** no instance found **")
         else:
+            print(len(token))
             print("** class doesn't exist **")
 
     def do_all(self, args):
@@ -119,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
                 if token[0] not in HBNBCommand.checkclass:
                     print("** class doesn't exist ** ")
                     return
-                if token[0] == objects[key].__dict__['__class__']:
+                if token[0] in HBNBCommand.checkclass:
                     print(objects[key])
             else:
                 print(objects[key])
@@ -133,7 +139,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        token = args.split(" ")
+        token = shlex.split(args)
         objects = storage.all()
         if token[0] not in HBNBCommand.checkclass:
             print("** class doesn't exist **")
