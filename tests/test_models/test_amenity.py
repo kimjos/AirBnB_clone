@@ -5,6 +5,7 @@ import json
 import unittest
 from models.amenity import Amenity
 
+
 class TestAmenity(unittest.TestCase):
     """ tests for Amenity class """
     def test_docstring(self):

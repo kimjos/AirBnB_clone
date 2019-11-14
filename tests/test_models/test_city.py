@@ -2,7 +2,8 @@
 """ Unittest for City class """
 
 import json
-from models.city impor City
+from models.city import City
+import unittest
 
 
 class TestCity(unittest.TestCase):
@@ -10,4 +11,4 @@ class TestCity(unittest.TestCase):
 
     def test_docstring(self):
         """ checks if there is a docstring """
-        self.assertIsNotNone(FileStorage.__doc__)
+        self.assertIsNotNone(City.__doc__)

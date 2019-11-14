@@ -8,4 +8,7 @@ from models.state import State
 
 class TestState(unittest.TestCase):
     """ Tests for State class """
-    self.assertIsNone(State.__doc__)
+
+    def test_docstring(self):
+        """ checks in there is a docstring """
+        self.assertIsNone(State.__doc__)
