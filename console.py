@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
         elif args not in HBNBCommand.checkclass:
-            print("** class doesn't exist **'")
+            print("** class doesn't exist **")
         else:
             dic = {'BaseModel': BaseModel, 'User': User, 'State': State,
                   'City': City, 'Amenity': Amenity, 'Place': Place,
