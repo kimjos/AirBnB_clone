@@ -81,7 +81,7 @@ The console will be a tool to validate this storage engine
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
      ```
   
-## Instalation
+### Instalation
 *  Clone this repository:
 ```sh
 https://github.com/Doniben/AirBnB_clone.git
@@ -91,10 +91,10 @@ https://github.com/Doniben/AirBnB_clone.git
 ```sh
 ./console.py 
 ```
-## Written in
+### Written in
 * GNU Emacs 24.3.1
 * Python 3.4.3
-## Example of use
+### Example of use
 ```sh
 (hbnb) help
 ```
