@@ -18,10 +18,10 @@ Usage
 
 $ ./console.py [command] [arguments]
 # Commands
-create: Create a new user
-all: List all users
-update: Edit a user
-destroy: Delete a user
-help: Show the help command
-count: Show the number of users
-quit: Exit the application
+###create: Create a new user
+###all: List all users
+###update: Edit a user
+###destroy: Delete a user
+###help: Show the help command
+###count: Show the number of users
+###quit: Exit the application
